@@ -1,0 +1,40 @@
+---
+layout: default
+title: Crack Apple TV
+---
+
+这几天拿到 @ai829 的 Apple TV,尝试破解了一下,记录一下这次的破解历程<br>
+
+<ul>
+    <li>事前准备:AppleTV一台,U盘一个,网线一根</li>
+    <li>先升级固件到2.4.0</li>
+    <li>下载2.4.0的dmg为一会制作破解U盘作准备
+        <p>http://mesu.apple.com/data/OS/061-6242.20090624.Aq20P/2Z694-5660-029.dmg</p>
+    </li>
+    <li>下载atvusb-creator (atvusb-creator-1.0.b10.zip)
+        <p>http://code.google.com/p/atvusb-creator/downloads/list</p>
+    </li>
+    <li>插入事先准备好的U盘,运行atv-creator,出现如下界面<br>
+        <img src="http://atvusb-creator.googlecode.com/svn/branches/wiki-images/atvusb-creator.png"/>
+        <ul>
+            <li>选择ssh-tools</li>
+            <li>Choose a DMG,选择之前下载的2.4.0的dmg文件</li>
+        </ul>
+        然后点击Create Using -> 这个选项,一个破解U盘就制作好了
+    </li>
+    <li>
+        <p>
+        把做好的U盘插入到AppleTV上,然后用网线把AppleTV和交换机连接,启动AppleTV.启动后会看到破解的过程,破解完成后,会在你的AppleTV上启动一个SSH服务
+        <ul>
+            <li>host: appletv.local</li>
+            <li>user: frontrow</li>
+            <li>password: frontrow</li>
+        </ul>
+        然后拔掉U盘,拔电,重启你的AppleTV
+        </p>
+    </li>
+    <li>
+        然后用scp命令,把你的影片放到appletv的Movies目录即可,例如:<br/>
+        scp xxx.avi frontrow@appletv.local:~/Movies/
+    </li>
+</ul>
