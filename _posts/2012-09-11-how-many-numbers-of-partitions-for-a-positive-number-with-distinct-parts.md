@@ -38,17 +38,17 @@ Solution: 将问题转换成在<a href="http://www.codecogs.com/eqnedit.php?late
 
 
 
-对于情况1，实际上是需要在1，2，3....n-2种找到和为1的自然数组合.根据前文的记号，可以有组<a href="http://www.codecogs.com/eqnedit.php?latex=C\binom{n-2}{1}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?C\binom{n-2}{1}" title="C\binom{n-2}{1}" /></a>情况.<br/></p><br/><br/>
+对于情况1，实际上是需要在1，2，3....n-2种找到和为1的自然数组合.根据前文的记号，可以有组<a href="http://www.codecogs.com/eqnedit.php?latex=P\binom{n-2}{1}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P\binom{n-2}{1}" title="P\binom{n-2}{1}" /></a>情况.<br/></p><br/><br/>
 
 
 
 
 <p>
-对于情况2，实际上是需要在1，2，3....n-2种找到和为n的自然数组合.根据前文的记号，可以有组<a href="http://www.codecogs.com/eqnedit.php?latex=C\binom{n-2}{n}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?C\binom{n-2}{n}" title="C\binom{n-2}{n}" /></a>情况.<br/></p>
+对于情况2，实际上是需要在1，2，3....n-2种找到和为n的自然数组合.根据前文的记号，可以有组<a href="http://www.codecogs.com/eqnedit.php?latex=P\binom{n-2}{n}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P\binom{n-2}{n}" title="P\binom{n-2}{n}" /></a>情况.<br/></p>
 <br/><br/>
 
 
-由此分析，我们得到:<p><a href="http://www.codecogs.com/eqnedit.php?latex=C\binom{n-1}{n} = C\binom{n-2}{1} @plus; C\binom{n-2}{n}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?C\binom{n-1}{n} = C\binom{n-2}{1} + C\binom{n-2}{n}" title="C\binom{n-1}{n} = C\binom{n-2}{1} + C\binom{n-2}{n}" /></a></p>
+由此分析，我们得到:<p><a href="http://www.codecogs.com/eqnedit.php?latex=P\binom{n-1}{n} = P\binom{n-2}{1} @plus; P\binom{n-2}{n}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P\binom{n-1}{n} = P\binom{n-2}{1} + P\binom{n-2}{n}" title="P\binom{n-1}{n} = P\binom{n-2}{1} + P\binom{n-2}{n}" /></a></p>
 <br/><br/>
 
 
@@ -57,7 +57,7 @@ Solution: 将问题转换成在<a href="http://www.codecogs.com/eqnedit.php?late
 <br/>
 <p>
 好吧，我们带入6来检测下:
-<a href="http://www.codecogs.com/eqnedit.php?latex=C\binom{5}{6} = C\binom{4}{1} @plus; C\binom{4}{6} = 1 @plus; C\binom{3}{2} @plus; C\binom{3}{6} = 1 @plus; 1 @plus; C\binom{2}{3} @plus; C\binom{2}{6} = 1 @plus; 1 @plus; 1 @plus; 0 = 3" target="_blank"><img src="http://latex.codecogs.com/gif.latex?C\binom{5}{6} = C\binom{4}{1} + C\binom{4}{6} = 1 + C\binom{3}{2} + C\binom{3}{6} = 1 + 1 + C\binom{2}{3} + C\binom{2}{6} = 1 + 1 + 1 + 0 = 3" title="C\binom{5}{6} = C\binom{4}{1} + C\binom{4}{6} = 1 + C\binom{3}{2} + C\binom{3}{6} = 1 + 1 + C\binom{2}{3} + C\binom{2}{6} = 1 + 1 + 1 + 0 = 3" /></a></p>
+<a href="http://www.codecogs.com/eqnedit.php?latex=P\binom{5}{6} = P\binom{4}{1} @plus; P\binom{4}{6} = 1 @plus; P\binom{3}{2} @plus; P\binom{3}{6} = 1 @plus; 1 @plus; P\binom{2}{3} @plus; P\binom{2}{6} = 1 @plus; 1 @plus; 1 @plus; 0 = 3" target="_blank"><img src="http://latex.codecogs.com/gif.latex?P\binom{5}{6} = P\binom{4}{1} + P\binom{4}{6} = 1 + P\binom{3}{2} + P\binom{3}{6} = 1 + 1 + P\binom{2}{3} + P\binom{2}{6} = 1 + 1 + 1 + 0 = 3" title="P\binom{5}{6} = P\binom{4}{1} + P\binom{4}{6} = 1 + P\binom{3}{2} + P\binom{3}{6} = 1 + 1 + P\binom{2}{3} + C\binom{2}{6} = 1 + 1 + 1 + 0 = 3" /></a></p>
 
 
 
